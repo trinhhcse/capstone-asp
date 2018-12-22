@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VerticalCollectionView" customModule="Roommate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="490" height="440"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hL-vOy">
+                    <rect key="frame" x="0.0" y="0.0" width="490" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="v1w-6U-VGF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFn-9m-34f">
+                    <rect key="frame" x="0.0" y="400" width="490" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="NGw-hZ-yrE"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onClickBtnViewAll:" destination="iN0-l3-epB" eventType="touchUpInside" id="mub-LC-D7e"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4C5-Tn-Qdr" customClass="BaseVerticalCollectionView" customModule="Roommate" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="490" height="360"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FPU-Ii-lxv">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hd0-hL-vOy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KEX-3K-DlC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rFn-9m-34f" secondAttribute="bottom" id="NYt-eC-pRp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4C5-Tn-Qdr" secondAttribute="trailing" id="P9V-FP-kg1"/>
+                <constraint firstItem="hd0-hL-vOy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="X8R-g9-MMC"/>
+                <constraint firstItem="4C5-Tn-Qdr" firstAttribute="top" secondItem="hd0-hL-vOy" secondAttribute="bottom" id="Xub-9R-o6O"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hd0-hL-vOy" secondAttribute="trailing" id="Zx8-ln-NCi"/>
+                <constraint firstItem="rFn-9m-34f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dYH-hP-XMk"/>
+                <constraint firstItem="rFn-9m-34f" firstAttribute="top" secondItem="4C5-Tn-Qdr" secondAttribute="bottom" id="k7M-gy-KqA"/>
+                <constraint firstItem="4C5-Tn-Qdr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kzc-Ob-0x2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rFn-9m-34f" secondAttribute="trailing" id="zb1-ai-ArR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnViewAll" destination="rFn-9m-34f" id="pyN-j3-HoY"/>
+                <outlet property="btnViewAllHeightConstraint" destination="NGw-hZ-yrE" id="oCc-qM-hJP"/>
+                <outlet property="collectionView" destination="4C5-Tn-Qdr" id="ZBF-Bl-8YR"/>
+                <outlet property="lblTitle" destination="hd0-hL-vOy" id="pSG-Z2-HEe"/>
+            </connections>
+            <point key="canvasLocation" x="91" y="-60"/>
+        </view>
+    </objects>
+</document>

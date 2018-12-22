@@ -1,0 +1,424 @@
+/*
+ Localizable.strings
+ Roommate
+ 
+ Created by TrinhHC on 9/21/18.
+ Copyright © 2018 TrinhHC. All rights reserved.
+ */
+//MARK: Navigation Title
+"FILTER"="Bộ lọc";
+"CREATE_ROOM"="Đăng phòng";
+"CREATE_ROOMMATE_POST"="Đăng tìm phòng";
+
+"CREATE_ROOM_POST"="Đăng tìm ở ghép";
+"CREATE"="Đăng ngay";
+"EDIT_POST"="Sửa bài viết";
+"ALL_VC"="Tất cả";
+"BOOKMARK_VC"="Đánh dấu";
+"SIGN_IN_TITLE" = "Đăng nhập";
+"TITLE_CHANGE_PASSWORD" = "Đổi mật khẩu";
+"SIGN_UP_AS_ROOMOWNER_TITLE" = "Đăng ký làm chủ nhà";
+"SIGN_UP_AS_MEMBER_TITLE" = "Đăng ký thành viên";
+"TITLE_FORGOT_PASSWORD" = "Quên mật khẩu";
+"TITLE_SEND_EMAIL" = "Gửi email";
+"TITLE_GET_PASSWORD" = "Lấy lại mật khẩu";
+"ERROR_NON_EXIST_USER_WITH_EMAIL" = "Không có tài khoản nào liên kết với địa chỉ email này";
+"TITLE_GET_PASSWORD_SUCCESS" = "Lấy lại mật khẩu thành công vui lòng kiểm tra email";
+"TITLE_FORGOT_PASSWORD_DESCRIPTION" = "Vui lòng nhập địa chỉ email chúng tôi sẽ gửi mật khẩu mới vào email liên kết với tài khoản ";
+"HOME_VC" = "Trang chủ";
+"NOTIFICATION_VC" = "Thông báo";
+"ACCOUNT_VC" = "Tài khoản";
+"SUGGEST" = "Gợi ý";
+"ROOM_ALL" = "Tất cả phòng";
+"SETTING" = "Cài đặt";
+
+//MARK: AccountVC
+
+"TITLE_CREATED_ROOM" = "Phòng đã tạo";
+"TITLE_CURRENT_MEMBER_ROOM" = "Phòng bạn đang ở";
+"TITLE_HISTORY_MEMBER_ROOM" = "Phòng bạn đã ở";
+"TITLE_MEMBER_CREATED_ROOM_POST" = "Bài viết tìm bạn đã tạo";
+"TITLE_MEMBER_CREATED_ROOMMATE_POST" = "Bài viết tìm phòng đã tạo";
+"TITLE_USER_RATE" = "Đánh giá về bạn";
+"CURRENT_NUMBER_OF_PERSON" = "Số người hiện tại:%d/%d";
+"NO_OWNER_ROOM"="Bạn chưa tạo phòng nào";
+"TITLE_MEMBER_NO_HISTORY_ROOM"="Bạn chưa ở phòng nào";
+"NO_MEMBER_ROOM"="Phòng chưa thêm thành viên nào";
+"TITLE_USER_DETAIL"="Thông tin của bạn";
+"TITLE_MEMBER_NO_CURRENT_ROOM" = "Bạn không có phòng hiện tại";
+"ERROR_LOAD_CURRENT_ROOM" = "Không thể tải thông tin phòng hiện tại của bạn, Chạm để thử lại";
+"ERROR_LOAD_CURRENT_ROOM_NON_EXIST" = "Không thể tạo bài đăng khi bạn không ở phòng nào";
+"ERROR_LOAD_ROOM_OF_POST_NON_EXIST" = "Không tìm thấy thông tin phòng của bài đăng.";
+"ERROR_LOAD_USER" = "Không thể tải thông tin người dùng";
+"LOAD_CURRENT_ROOM" = "Đang tải thông tin phòng";
+"LOAD_USER_ORMAO" = "Đang tải thông tin người dùng";
+"LOAD_REMOVE_ROOM" = "Đang xoá phòng";
+
+//MARK: SettingVC
+"TITLE_SIGN_OUT" = "Đăng xuất";
+"TITLE_SIGN_UP" = "Đăng ký";
+"HEADER_ACCOUNT" = "Tài khoản của tôi";
+"HEADER_LANGUAGE" = "Cài đặt ngôn ngữ";
+"HEADER_OTHER" = "Khác";
+"SUGGEST_SETTING"="Cài đặt gợi ý"; 
+"PROFILE_SETTING"="Thông tin tài khoản";
+"PROFILE_USER"="Thông tin người dùng";
+"LANGUGE_SETTING"="Ngôn ngữ";
+"ABOUT_US_SETTING"="Về chúng tôi";
+"PRIVACY_SETTING"="Quy định";
+"FEEDBACK_SETTING"="Phản hồi";
+"SUGGEST_SETTING_CREATE_SUCCESS" = "Lưu cài đặt gợi ý thành công";
+"LANGUAGE_SETTING_VIETNAME" = "Hiện tại ứng dụng chỉ hỗ trợ tiếng việt";
+"ABOUT_US_SETTING_MESSAGE" = "Roommate version 0.0.1";
+"PRIVACY_SETTING_MESSAGE" = "Vui lòng không đăng thông tin nhạy cảm lên ứng dụng của chúng tôi";
+"FEEDBACK_SETTING_MESSAGE" = "Mọi thắc mắc vui lòng gửi email về địa chỉ asp@fpt.edu.vn";
+
+
+//MARK: Roommate cell
+"ROMMATE_RIGHT_PRICE"="Mức giá";
+"ROMMATE_RIGHT_POSITION"="Vị trí tìm kiếm";
+"ROMMATE_RIGHT_CITY"="Tỉnh/Thành";
+
+//MARK: Segment control
+"SEGMENTED_CONTROL_ROOM"="Phòng ở ghép";
+"SEGMENTED_CONTROL_ROOMMATE"="Người ở ghép";
+
+//MARK: Room cell
+"NUMBER_OF_PERSON"="Tìm ở ghép %d %@";
+"PRICE_OF_ROOM"="%@ VND/%@";
+"DATE_CREATED_OF_ROOM"="%@";
+"PRICE_OF_ROOMMATE"="Từ %@ đến %@ VND/%@";
+"PERSON"="Người";
+
+//MARK: OrderType
+"NEWEST"="Mới nhất";
+"LOW_TO_HIGH_PRICE"="Giá từ thấp đến cao";
+"HIGH_TO_LOW_PRICE"="Giá từ cao đến thấp";
+"ORDER_TITLE"="Sắp xếp theo : ";
+
+
+//MARK: HOMEVC
+"PLACE_HOLDER_SEARCH"="Tìm địa chỉ quận...";
+"TITLE_SUGGEST_ROOM" = "Phòng ở ghép có thể phù hợp với bạn";
+"TITLE_NEW_ROOM" = "Bài viết tìm người ở ghép mới";
+"TITLE_NEW_ROOMMATE" = "Bài viết tìm phòng mới";
+"TITLE_VIEW_ALL" = "Xem tất cả";
+"TITLE_SUGGEST" = "Gợi ý";
+"TITLE_HISTORY" = "Lịch sử tìm kiếm";
+
+//MARK: Utilies
+"FEMALE"="Nữ";
+"MALE"="Nam";
+"cctv"="Camera an ninh";
+"24-hours"="Giờ giấc tự do";
+"aircondition"="Máy lạnh";
+"closet"="Tủ quần áo";
+"security"="An ninh";
+"cooking"="Cho nấu ăn";
+"fan"="Quạt";
+"bed"="Giường ngủ";
+"internet"="Mạng internet";
+"key"="Không chung chủ";
+"parking"="Chỗ đậu xe";
+"policeman"="Bảo vệ";
+"refrigerator"="Tủ lạnh";
+"television"="Tivi";
+"toilet"="WC riêng";
+"washing-machine"="Máy giặt";
+"water-heater"="Máy nước nóng";
+
+//MARK: RoomDetailVC
+"ROOM_DETAIL_MEMBER_TITLE"="Thông tin thành viên trong phòng";
+"ROOM_DETAIL_STATUS_AUTHORIZED"="Đã xác thực";
+"ROOM_DETAIL_STATUS_DECLINED"="Đã từ chối";
+"ROOM_DETAIL_STATUS_PENDING"="Đang xem xét";
+"ROOM_DETAIL_MAX_NUMBER_OF_MEMBER"="Số người tối đa : %d";
+"ROOM_DETAIL_REACH_MAX_NUMBER_OF_MEMBER"="Phòng đã đầy người";
+"ROOM_DETAIL_CURRENT_NUMBER_OF_MEMBER"="Hiện tại : %d";
+"ROOM_DETAIL_ADDED_NUMBER_OF_MEMBER"="Đã thêm : %d";
+"GENDER_ACCEPT"="Giới tính";
+
+"CONFIRM_TITLE_BUTTON_CALL" = "Gọi";
+"CONFIRM_TITLE_BUTTON_MESSAGE" = "Gửi ngay";
+"CONFIRM_TITLE_DELETE_ROOM_OK" = "Xoá ngay";
+"CONFIRM_TITLE_DELETE_ROOM" = "Bạn muốn xoá phòng?";
+"CONFIRM_TITLE_EDIT_ROOM" = "Bạn muốn sửa phòng";
+"CONFIRM_TITLE_EDIT_ROOM_OK" = "Sửa ngay";
+"CONFIRM_MESSAGE_CALL_ALERT" = "Bạn muốn gọi điện cho chủ nhà";
+"REMOVE_SUCCESS"="Xoá phòng thành công";
+"CONFIRM_MESSAGE_SMS_ALERT" = "Bạn muốn nhắn tin cho chủ nhà";
+"CONFIRM_MESSAGE_POST_CALL_ALERT" = "Bạn muốn gọi điện cho người đăng tin";
+"CONFIRM_MESSAGE_POST_SMS_ALERT" = "Bạn muốn nhắn tin cho người đăng tin";
+
+//MARK:FilterVC
+"LIST_CITY_TITLE"="Chọn thành phố";
+"LIST_CITY_MESSAGE"="";
+"LIST_DISTRICT_TITLE"="Chọn quận";
+"LIST_DISTRICT_MESSAGE"="";
+"RESET" = "Đặt lại";
+
+//MARK: UtilityDetail
+"BRAND_TITLE"="Nhãn hiệu: %@";
+"QUANTITY_TITLE"="Số lượng: %d";
+"DESCRIPTION_PLACE_HOLDER"="Mô tả: %@";
+//MARK: UtilityInput
+"BRAND_PLACE_HOLDER"="Nhãn hiệu";
+"QUANTITY_PLACE_HOLDER"="Số lượng";
+"DESCRIPTION_PLACE_HOLDER"="Mô tả";
+
+
+//MARK: Common
+"INFORMATION"="Thông báo";
+"RESULT"="Kết quả";
+"SEARCH"="Tìm kiếm";
+"SELECT_IMAGE"="Chọn ảnh";
+"SEARCH_RESULT"="Kết quả tìm kiếm";
+"SEARCH_NEARBY"="Địa điểm gần đó";
+"TITLE_CHANGE_PASSWORD_SUCCESS" = "Đổi mật khẩu thành công";
+"ERROR_OLD_PASSWORD" = "Mật khẩu cũ không đúng";
+
+"NO_DATA"="Không có dữ liệu";
+"NO_MORE_DATA"="Không có thêm dữ liệu";
+"EDIT"="Sửa";
+"BACK"="Quay lại";
+"BASE_INFORMATION"="Thông tin cơ bản";
+"UTILITY_TITLE"="Tiện ích";
+"UTILITY_TITLE_REQUIRED"="(Vui lòng chọn ít nhất 1)";
+"UTILITY_INFOR_TITLE"="Thông tin tiện ích";
+"DESCRIPTION"="Mô Tả";
+"DESCRIPTION_EMPTY"="Không có mô tả";
+
+"GENDER"="Giới Tính";
+"ADDRESS"="Địa chỉ : %@";
+"AREA"="Diện tích : %d m2";
+"AREA_TITLE"="Diện tích :";
+"MONTH"="Tháng";
+"TIME"="Chỉnh sửa %@";
+"CONFIRM_TITLE" = "Xác nhận";
+"CONFIRM_MESSAGE_EMAIL_ALERT" = "Gửi";
+"GENDER_REQUIRED_DESCRIPTION" = "Có thể chọn cả 2";
+"CANCEL" = "Huỷ";
+"OK" = "Chọn";
+"DONE" = "Xong";
+"NEXT" = "Tiếp";
+"NEXT_STEP" = "Tiếp tục";
+"SAVE" = "Lưu";
+"APPLY" = "Áp dụng";
+"SELECT" = "Vui lòng lựa chọn";
+"SELECT_NORMAL" = "Lựa chọn";
+"CITY" = "Tỉnh,Thành phố";
+"DISTRICT" = "Quận,Huyện";
+"PRICE" = "Giá";
+"AREA_TITLE" = "Diện tích";
+"MAX_NUMBER_OF_PERSON" = "Số người tối đa";
+"ALERT_TITLE" = "Thông báo";
+"INVALID_INFOR"="Vui lòng nhập đầy đủ thông tin hợp lệ";
+"INVALID_ROOM_STATUS"="Phòng chưa được xác thực nên hiện tại bạn không thể sửa thông tin thành viên";
+
+//MARK: Validator
+"ERROR_TYPE_USERNAME"="Tên đăng nhập từ 6 - 50 ký tự";
+"ERROR_TYPE_PASSWORD"="Mật khẩu từ 6 - 50 ký tự";
+"ERROR_TYPE_PASSWORD_NOT_REPEAT"="Mật khẩu không trùng";
+"ERROR_TYPE_REQUIRED_IMAGE"="Yêu cầu chọn ảnh";
+"ERROR_TYPE_NAME_MAX_CHAR_50"="Tên Từ 6 đến 50 ký tự";
+"ERROR_TYPE_QUANTITY"="Số lượng Từ 1 đến 20";
+"ERROR_TYPE_BRAND"="Nhãn Từ 2 đến 50 ký tự";
+"ERROR_TYPE_PRICE"="Giá từ %@ đến %@";
+"ERROR_TYPE_CITY"="Yêu cầu chọn";
+"ERROR_TYPE_DISTRICT"="Yêu cầu chọn";
+"ERROR_TYPE_AREA"="Diện tích từ 10 - 1000 m2";
+"ERROR_TYPE_PHONE"="Định dạng số điện thoại sai";
+"ERROR_TYPE_ADDRESS"="Số nhà đường phường từ 5 đến 250 ký tự";
+"ERROR_TYPE_ADDRESS_SUGGEST"="Địa chỉ phải chọn từ gợi ý";
+"ERROR_TYPE_INPUT"="Vui lòng nhập thông tin hợp lệ";
+"ERROR_TYPE_DESCRIPTION"="Mô tả từ 5 đến 250 ký tự";
+"ERROR_TYPE_UTILITY"="Chọn tối thiểu 1 tiện ích";
+"ERROR_TYPE_EMAIL"="Địa chỉ email không đúng";
+"PLACE_HOLDER_AVATAR_IMAGE"="Ảnh đại diện";
+"PLACE_HOLDER_FULL_NAME"="Tên đầy đủ";
+"PLACE_HOLDER_DOB"="Ngày sinh";
+"PLACE_HOLDER_PHONE_NUMBER"="Số điện thoại";
+"PLACE_HOLDER_EMAIL"="Địa chỉ email";
+"PLACE_HOLDER_USERNAME"="Tên đăng nhập";
+"PLACE_HOLDER_PASSWORD"="Mật khẩu";
+"PLACE_HOLDER_REPEAT_PASSWORD"="Nhập lại mật khẩu";
+"PLACE_HOLDER_OLD_PASSWORD"="Mật khẩu cũ";
+"PLACE_HOLDER_NEW_PASSWORD"="Mật khẩu mới";
+
+
+
+
+"PLACE_HOLDER_FULL_NAME_VALUE"="Tên đầy đủ : %@";
+"PLACE_HOLDER_DOB_VALUE"="Ngày sinh : %@";
+"PLACE_HOLDER_PHONE_NUMBER_VALUE"="Số điện thoại : %@";
+"PLACE_HOLDER_EMAIL_VALUE"="Địa chỉ email : %@";
+"PLACE_HOLDER_USERNAME_VALUE"="Tên đăng nhập : %@";
+"PLACE_HOLDER_GENDER_VALUE"="Giới tính : %@";
+
+//MARK: CERoomPostVC
+"ROOM_POST_INFOR_TITLE"="Thông tin bài biết";
+"ROOM_POST_NAME"="Tên bài viết";
+"ROOM_BASE_INFORMATION"="Thông tin phòng hiện tại của bạn";
+"ROOM_BASE_INFORMATION_FOR_POST"="Thông tin phòng";
+
+"VIEW_DETAIL" = "Xem chi tiết";
+
+
+//MARK: CERoommatePostVC
+"ROOM_POST_SETTING_TITLE"="Thông tin bài viết (Thông tin này sẽ được cập nhập cho cài đặt gợi ý)";
+"ROOM_POST_PHONE_CONTACT"="Thông tin liên hệ (*)";
+"POST_CREATE_SUCCESS"="Tạo bài viết thành công";
+"POST_EDIT_SUCCESS"="Sửa bài viết thành công";
+"POST_REMOVE_SUCCESS"="Xoá bài viết thành công";
+
+
+
+//MARK: CERoomVC
+"ROOM_CREATE"="Tạo phòng";
+"EDIT_MEMBER_VC"="Sửa thông tin thành viên";
+"EDIT_USER_INFO"="Sửa thông tin";
+"EDIT_USER_INFO_SUCCESS"="Sửa thông tin thành công";
+"ROOM_EDIT"="Sửa thông tin phòng";
+"ROOM_INFOR_TITLE"="Thông tin phòng";
+"ROOM_NAME_TITLE"="Tên Phòng";
+"ROOM_ADDRESS_TITLE"="Địa chỉ";
+"ROOM_ADDRESS_TITLE_REQUIRED_DISTRICT"="Địa chỉ: Yêu cầu chọn quận";
+"ROOM_AREA_TITLE"="Diện tích";
+"ROOM_FIND_NUMBER_OF_PERSON_TITLE"="Số người cần tìm";
+"ROOM_HOLDER_CITY_TITLE"="Chọn ngay";
+"ROOM_DISTRICT_TITLE"="Chọn ngay";
+"ROOM_UPLOAD_IMAGE_TITLE"="Đăng ảnh";
+"ROOM_UPLOAD_LIMIT"="Tải tối thiểu 2 và tối đa 12 ảnh dung lượng max:5MB";
+"ROOM_UPLOAD_SELECT_IMAGE"="Chọn ảnh";
+"ROOM_UPLOAD_SELECT_IMAGE_CAMERA"="Máy ảnh";
+"ROOM_UPLOAD_SELECT_IMAGE_PHOTO"="Thư viện";
+"ROOM_UPLOAD_ERROR"="Tải ảnh lên lỗi, vui lòng thử lại";
+"ROOM_UPLOAD_OPEN_CAMERA_SETTING"="Roommate chưa có quyền truy cập \"Máy ảnh\". Bật quyền truy cập máy giúp bạn tải ảnh lên từ Máy ảnh";
+"ROOM_UPLOAD_OPEN_PHOTO_SETTING"="Roommate chưa có quyền truy cập \"Thư viện\". Bật quyền truy cập thư viện giúp bạn tải ảnh lên từ Thư viện";
+"ROOM_UPLOAD_SKIP"="Bỏ qua";
+"ROOM_UPLOAD_OPEN_SETTING"="Mở cài đặt";
+"ROOM_UPLOAD_CAMERA_QUESTION"="Bạn có muốn tải ảnh lên từ Máy ảnh không";
+"ROOM_UPLOAD_PHOTO_QUESTION"="Bạn có muốn tải ảnh lên từ thư viện không";
+"YES"="Có";
+"NO"="Không";
+"ROOM_UPLOAD_SELECT"="Tải ảnh lên";
+"ROOM_UPLOAD_MAX"="Tải lên tối đa 12 ảnh";
+"CAMERA"="Máy ảnh";
+"PHOTO"="Thư viện";
+"DEVICE_CAMERA_NOT_EXISTED"="Máy của bạn không hỗ trợ camera";
+"ROOM_CREATE_SUCCESS"="Tạo phòng thành công";
+"ROOM_CURRENT_MEMBER_NUMBER"="Số thành viên hiện tại: %d";
+
+"ROOM_MEMBER_LESSTHAN_MAXGUEST"="Số người tối đa không được nhỏ hơn số thành viên được thêm vào phòng";
+"ROOM_MEMBER_MAX_CAPACITY"="Bạn nên cân nhắc vì diện tích phòng không đủ cho số người bạn vừa nhập. Diện tích tối thiểu là 7m2/người";
+
+
+
+
+//MARK: EditMemberVC
+"USER_GUIDE_SLIDE_TO_DELETE"="Vuốt từ phải sang trái để xoá";
+"EDIT_MEMBER_TITLE"="Thêm thành viên vào phòng";
+"EDIT_MEMBER_USERNAME"="Tên người dùng";
+"EDIT_MEMBER_ERROR"="Người dùng không tồn tại";
+"EDIT_MEMBER_ADD"="Thêm";
+"EDIT_SELECT_ROOM_MASTER"="Chọn người quản lý";
+"EDIT_MEMBER_SUCCESS"="Cập nhập thành viên thành công";
+"EDIT_ROOM_SUCCESS"="Cập nhập phòng thành công";
+"EDIT_ROOM_MASTER_REQUIRED"="Bạn phải chọn người quản lý phòng";
+"EDIT_ROOM_INVALID_MAXGUEST"="Phòng đã đủ người";
+"EDIT_MEMBER_ROOM_MASTER"="Chọn người quản lý phòng";
+
+
+//MARK: Network
+"NETWORK_STATUS_TITLE"="Thông báo";
+"NETWORK_STATUS_CONNECTED_ERROR_MESSAGE"="Không thể kết nối mạng, vui lòng kiểm tra lại";
+"NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE"="Không thể kết nối mạng, chạm để thử lại";
+"NETWORK_STATUS_ERROR_MESSAGE"="Lỗi mạng, chạm để thử lại";
+"NETWORK_STATUS_CONNECTED_SERVER_MESSAGE"="Không thể kết nối máy chủ, Vui lòng thử lại sau";
+"NETWORK_STATUS_PARSE_RESPONSE_FAIL_MESSAGE"="Oops.Có lỗi xảy ra, chạm để thử lại";
+//MARK: Alert
+"ALERT_INVALID_USERNAME_MESSAGE"="Tài khoản không tồn tại";
+"ALERT_INVALID_USERNAME_PASSWORD_MESSAGE"="Tên đăng nhập hoặc mật khẩu không đúng";
+
+"ALERT_NON_EXIST_USERNAME"="Tên người dùng không tồn tại";
+"EXISTED_USER"="Tên người dùng đã tồn tại";
+"ALERT_ADD_MEMBER_SUCCESS"="Thêm thành viên thành công";
+"ALERT_INVALID_PASSWORD_MESSAGE"="Mật khẩu không đúng";
+"ALERT_INVALID_MEMBER"="Thành viên này đang ở 1 phòng khác hoặc đang là chủ nhà";
+"ALERT_EXISTED_ROOM_MEMBER"="Thành viên đã tồn tại trong phòng";
+"PLACE_HOLDER_USERNAME"="Tên đăng nhập";
+
+
+
+//MARK: Progress hub title
+"MB_SIGN_IN_TITLE" = "Đang đăng nhập";
+"MB_LOAD_DATA_TITLE" = "Đang tải dữ liệu";
+"MB_LOAD_UPLOAD_IMAGE" = "Đang tải ảnh lên";
+"MB_LOAD_CREATE_ROOM" = "Đang tạo phòng";
+"MB_LOAD_CREATE_POST" = "Đang tạo bài viết";
+"MB_LOAD_EDIT_POST" = "Đang cập nhập bài viết";
+
+"MB_LOAD_CREATE_USER" ="Đang Đăng ký";
+"MB_LOAD_SAVE" ="Đang lưu";
+"MB_LOAD_EDIT_ROOM" = "Đang cập nhập thông tin phòng";
+
+"SEARCH_LOADING"="Đang tìm kiếm...";
+
+//MARK:Utility
+"Camera"="Camera an ninh";
+"Freetime"="Giờ giấc tự do";
+"Airconditioner"="Máy lạnh";
+"Cooking"="Nấu ăn";
+"Closet"="Tủ quần áo";
+"Fan"="Quạt";
+"Bed"="Giường";
+"Internet"="Internet";
+"Security"="Bảo vệ";
+"Notcommonowner"="Không chung chủ";
+"Parking"="Chỗ đậu xe";
+"Police"="Bảo vệ";
+"Fridge"="Tủ lạnh";
+"TV"="Tivi";
+"PrivateWC"="WC riêng";
+"Washingmachine"="Máy giặt";
+"Waterheater"="Máy nước nóng";
+
+//MARK: RateVC
+"RATE_ROOM"="Đánh giá phòng";
+"RATE_MEMBER"="Đánh giá thành viên";
+"RATE_ROOM_DETAIL"="Đánh giá của những người từng ở đây";
+"RATE_MEMBER_DETAIL"="Đánh giá của chủ nhà";
+"RATE_AVG"="Điểm trung bình";
+"RATE_ALL"="Tất cả đánh giá";
+
+"RATE_ROOM_SECURITY"="An ninh";
+"RATE_ROOM_LOCATION"="Vị trí";
+"RATE_ROOM_UTILITY"="Tiện ích";
+"RATE_ROOM_SECURITY_VALUE"="An ninh : %.01f";
+"RATE_ROOM_LOCATION_VALUE"="Vị trí : %.01f";
+"RATE_ROOM_UTILITY_VALUE"="Tiện ích : %.01f";
+"RATE"="Đánh giá";
+"RATE_EMPTY"="Chưa có đánh giá nào";
+
+
+"RATE_MEMBER_BEHAVIOR"="Hành vi";
+"RATE_MEMBER_LIFESTYLE"="Lối sống";
+"RATE_MEMBER_PAYMENT"="Chi trả";
+"RATE_MEMBER_BEHAVIOR_VALUE"="Hành vi : %.01f";
+"RATE_MEMBER_LIFESTYLE_VALUE"="Lối sống : %.01f";
+"RATE_MEMBER_PAYMENT_VALUE"="Chi trả : %.01f";
+"RATE_COMMENT"="Bình luận";
+"RATE_REQUIRED"="Yêu cầu chọn";
+"ERROR_TYPE_COMMENT"="Bình luận từ 6 - 50 ký tự";
+"RATE_SAVE_SUCCESS"="Lưu đánh giá thành công";
+
+//MARK: NotificationVC
+"ROOM_MASTER"="Quản lý";
+"ROOM_MEMBER"="Thành viên";
+"ROOM_ACCEPT_NOTIFICATION"="Phòng %@ đã được chấp nhận";
+"ROOM_DENIED_NOTIFICATION"="Phòng %@ đã bị từ chối";
+"ADD_MEMBER_NOTIFICATION"="Bạn đã được thêm vào phòng %@";
+"REMOVE_MEMBER_NOTIFICATION"="Bạn đã bị chủ phòng %@ xoá ra khỏi danh sách thành viên";
+"UPDATE_MEMBER_NOTIFICATION"="Chủ phòng %@ đã cập nhập thông tin thành viên.";
+"NOTIFICATION_DETAIL"="Thông báo";
+

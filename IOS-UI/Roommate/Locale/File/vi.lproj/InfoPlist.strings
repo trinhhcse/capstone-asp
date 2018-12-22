@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Roommate
+
+  Created by TrinhHC on 10/30/18.
+  Copyright © 2018 TrinhHC. All rights reserved.
+*/
+NSPhotoLibraryUsageDescription="Roommate muốn truy cập thư viện ảnh";
+NSCameraUsageDescription="Roommate muốn truy cập máy ảnh";
+NSLocationUsageDescription="Roommate muốn truy cập vị trí của bạn";
+NSLocationAlwaysAndWhenInUseUsageDescription="Roommate muốn truy cập vị trí của bạn khi dùng ứng dụng";

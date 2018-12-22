@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Roommate
+
+  Created by TrinhHC on 9/21/18.
+  Copyright © 2018 TrinhHC. All rights reserved.
+*/
+"KEY"="English";
+"ROMMATE_RIGHT_PRICE"="Price level";

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DropdownListView" customModule="Roommate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tn-2r-zKw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ljy-QP-NpD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU1-Sh-64h">
+                    <rect key="frame" x="0.0" y="40" width="375" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="wfz-O8-LLG"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onClickBtnSelect:" destination="iN0-l3-epB" eventType="touchUpInside" id="bFr-3a-keB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zU1-Sh-64h" secondAttribute="trailing" id="G5a-oq-ZCq"/>
+                <constraint firstItem="6tn-2r-zKw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JKV-eh-bOd"/>
+                <constraint firstItem="zU1-Sh-64h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aHP-mx-Gjg"/>
+                <constraint firstItem="zU1-Sh-64h" firstAttribute="top" secondItem="6tn-2r-zKw" secondAttribute="bottom" id="dz4-EV-aXX"/>
+                <constraint firstItem="6tn-2r-zKw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ieX-8L-hai"/>
+                <constraint firstItem="6tn-2r-zKw" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="tWb-9N-EmD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnSelect" destination="zU1-Sh-64h" id="ewk-fp-hxP"/>
+                <outlet property="lblTitle" destination="6tn-2r-zKw" id="vl0-aV-PMZ"/>
+            </connections>
+            <point key="canvasLocation" x="68.5" y="-540.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DescriptionView" customModule="Roommate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="538" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYX-wm-Eao">
+                    <rect key="frame" x="0.0" y="0.0" width="538" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="oXv-7b-3FG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isx-0v-ccA">
+                    <rect key="frame" x="0.0" y="30" width="538" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="isx-0v-ccA" firstAttribute="top" secondItem="EYX-wm-Eao" secondAttribute="bottom" id="1P9-lb-Urd"/>
+                <constraint firstItem="EYX-wm-Eao" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DDa-10-0uv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="isx-0v-ccA" secondAttribute="trailing" id="Lru-kz-Lbb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EYX-wm-Eao" secondAttribute="trailing" id="cqy-fi-Ou0"/>
+                <constraint firstItem="isx-0v-ccA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hIV-eH-vFF"/>
+                <constraint firstItem="isx-0v-ccA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="lTj-B3-ZYM"/>
+                <constraint firstItem="EYX-wm-Eao" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uDM-kV-JzZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblTitle" destination="EYX-wm-Eao" id="cJT-Gh-rxv"/>
+                <outlet property="tvContent" destination="isx-0v-ccA" id="tnQ-m7-IKm"/>
+            </connections>
+            <point key="canvasLocation" x="107" y="-192"/>
+        </view>
+    </objects>
+</document>
