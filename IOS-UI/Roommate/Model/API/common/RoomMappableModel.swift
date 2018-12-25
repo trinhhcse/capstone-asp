@@ -57,30 +57,6 @@ class RoomMappableModel: Mappable,NSCopying,Equatable,Hashable {
         self.roomRateResponseModels = roomRateResponseModels
     }
     
-//    init(roomModel:RoomModel){
-//        self.roomId = roomModel.roomId
-//        self.name = roomModel.name
-//        self.price = roomModel.price
-//        self.area = roomModel.area
-//        self.address = roomModel.address
-//        self.maxGuest = roomModel.maxGuest
-////        self.currentMember = roomModel.currentMember
-//        self.userId = roomModel.userId
-//        self.cityId = roomModel.cityId
-//        self.districtId = roomModel.districtId
-//        self.date = roomModel.date
-//        self.statusId = roomModel.statusId
-//        self.roomDescription = roomModel.roomDescription
-//        self.phoneNumber = roomModel.phoneNumber
-//        self.utilities = roomModel.utilities.compactMap({ (utility) -> UtilityMappableModel? in
-//            UtilityMappableModel(roomUtilityModel: utility)
-//        })
-//        self.imageUrls = roomModel.imageUrls.compactMap{$0}
-//        self.members = roomModel.members.compactMap{MemberResponseModel(memberModel: $0)}
-//        self.longitude = roomModel.longitude
-//        self.latitude = roomModel.latitude
-//    }
-
     
 
 

@@ -157,7 +157,6 @@ class PostDetailVC:BaseAutoHideNavigationVC,OptionViewDelegate,UtilitiesViewDele
         _ = horizontalImagesView.anchor(contentView.topAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, .zero ,CGSize(width: 0, height: Constants.HEIGHT_CELL_IMAGECV))
         _ = baseInformationView.anchor(horizontalImagesView.bottomAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, padding,CGSize(width: 0, height:heightBaseInformationView ))[3]
         if viewType == .roomPostDetailForFinder || viewType == .roomPostDetailForCreatedUser {
-//            _ = genderView.anchor(baseInformationView.bottomAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, padding,CGSize(width: 0, height: Constants.HEIGHT_VIEW_GENDER))
             utilitiesViewHeightConstraint = utilitiesView.anchor(baseInformationView.bottomAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, padding,CGSize(width: 0, height: utilitiesViewHeight))[3]
             descriptionViewHeightConstraint = descriptionsView.anchor(utilitiesView.bottomAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, padding,CGSize(width: 0, height: descriptionViewHeight))[3]
             rateViewHeightConstraint = rateView.anchor(descriptionsView.bottomAnchor, contentView.leftAnchor, nil, contentView.rightAnchor, padding,CGSize(width: 0, height: rateViewHeight))[3]
@@ -213,17 +212,9 @@ class PostDetailVC:BaseAutoHideNavigationVC,OptionViewDelegate,UtilitiesViewDele
             
             horizontalImagesView.images = room.imageUrls
             
-            //Data for baseInformationView
-            //            baseInformationView.lblMainTitle.text = room.name
-            //            baseInformationView.lblSubTitle.text = "BASE_INFORMATION".localized
-            //            baseInformationView.tvInfoTop.text = room.address
-            //            baseInformationView.lblInfoBottom.text = String(format: "AREA".localized,room.area!)
-            //            baseInformationView.lblTitleDescription.text  = room.genderPartner == 1 ? String(format: "NUMBER_OF_PERSON".localized,room.genderPartner!,"MALE".localized) :
-            //                room.genderPartner == 2 ? String(format: "NUMBER_OF_PERSON".localized,room.numberPartner!,"FEMALE".localized) : String(format: "NUMBER_OF_PERSON".localized,room.numberPartner!,"\("MALE".localized)/\("FEMALE".localized)")
             baseInformationView.roomPost = room
             
             //Data for genderview
-//            genderView.genderSelect = GenderSelect(rawValue: room.genderPartner!)
             
             //Data for descriptionView
             descriptionsView.viewType = viewType
@@ -345,7 +336,6 @@ class PostDetailVC:BaseAutoHideNavigationVC,OptionViewDelegate,UtilitiesViewDele
                 vc.cERoommateVCType = .edit
                 vc.roommatePostRequestModel = RoommatePostRequestModel(model: roommate)
                 self.navigationController?.pushViewController(vc, animated: true)
-//                presentInNewNavigationController(viewController: vc,flag: false)
             }
         }else if viewType == .roomPostDetailForFinder || viewType == .roommatePostDetailForFinder{
             AlertController.showAlertConfirm(withTitle: "CONFIRM_TITLE".localized, andMessage: "CONFIRM_MESSAGE_POST_SMS_ALERT".localized, alertStyle: .alert, forViewController: self,  lhsButtonTitle: "CANCEL".localized, rhsButtonTitle: "CONFIRM_TITLE_BUTTON_MESSAGE".localized, lhsButtonHandler: nil, rhsButtonHandler: { (action) in

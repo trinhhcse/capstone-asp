@@ -201,28 +201,5 @@ class MainTabBarVC: BaseTabBarVC,UITabBarControllerDelegate{
         }
         self.group.wait()
     }
-    func requestCurrentRoom(){
-        self.group.enter()
-        APIConnection.requestObject(apiRouter: APIRouter.getCurrentRoom(userId: DBManager.shared.getUser()!.userId), returnType: RoomMappableModel.self){ (value, error, statusCode) -> (Void) in
-            
-            if error == nil{
-                //200
-                if statusCode == .OK{
-                    guard let value = value else{
-                        //                        APIResponseAlert.defaultAPIResponseError(controller: self, error: ApiResponseErrorType.PARSE_RESPONSE_FAIL)
-                        self.group.leave()
-                        return
-                    }
-                     _ = DBManager.shared.addSingletonModel(ofType: RoomModel.self, object: RoomModel(roomId:value.roomId,userId:DBManager.shared.getUser()?.userId))
-                }else if statusCode == .NotFound{
-                    DBManager.shared.deleteAllRecords(ofType: RoomModel.self)
-                }
-            }
-            self.group.leave()
-        }
-        self.group.wait()
-    }
-    
     
 }
-//

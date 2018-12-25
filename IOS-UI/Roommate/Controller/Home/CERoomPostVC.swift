@@ -99,9 +99,11 @@ class CERoomPostVC: BaseVC,GenderViewDelegate,InputViewDelegate,MaxMemberSelectV
             requestCurrentRoom(inView: self.view) { (roomMappableModel) in
                 DispatchQueue.main.async {
                     self.roomOfPost = roomMappableModel
-                    self.setupUI()
-                    self.setData()
-                    self.registerNotificationForKeyboard()
+                    if !self.checkIfMaxMember(){
+                        self.setupUI()
+                        self.setData()
+                        self.registerNotificationForKeyboard()
+                    }
                 }
             }
         }else{
@@ -123,7 +125,16 @@ class CERoomPostVC: BaseVC,GenderViewDelegate,InputViewDelegate,MaxMemberSelectV
        
         
     }
-    
+    func checkIfMaxMember()->Bool{
+        if self.roomOfPost.members?.count == self.roomOfPost.maxGuest{
+            AlertController.showAlertInfor(withTitle: "INFORMATION".localized, forMessage: "ROOM_REACH_MAX_MEMBER".localized, inViewController: self,rhsButtonHandler: {
+                (action) in
+                self.dimissEntireNavigationController()
+            })
+            return true
+        }
+        return false
+    }
     
     func setupUI(){
         title = cERoomPostVCType == .create ? "CREATE_ROOM_POST".localized : "EDIT_POST".localized

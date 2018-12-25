@@ -43,7 +43,7 @@ class MembersView: UIView , UITableViewDelegate,UITableViewDataSource ,MemberTVC
     
     var viewType:ViewType?{
         didSet{
-            if viewType == .detailForOwner {
+            if viewType == .detailForOwner || viewType == .currentDetailForMember {
                 tableView.allowsMultipleSelectionDuringEditing = false
 //                tableView.allowsSelection = false
 //                tableView.isEditing = false

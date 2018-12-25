@@ -400,8 +400,6 @@ class CERoomVC: BaseVC,InputViewDelegate,MaxMemberSelectViewDelegate,UtilitiesVi
                 addressInputView.isSelectedFromSuggest = false
                 addressInputView.tfInput.setupUI(placeholder: "ROOM_ADDRESS_TITLE", title: "ROOM_ADDRESS_TITLE", delegate: addressInputView)
                 search(text: string)
-                //                newRoomModel.address = string
-                //                view.layoutIfNeeded()
             }
         default:
             break

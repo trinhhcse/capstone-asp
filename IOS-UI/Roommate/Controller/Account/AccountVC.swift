@@ -68,15 +68,6 @@ class AccountVC:BaseVC,VerticalCollectionViewDelegate,UITableViewDelegate,UITabl
     var bottomContainerViewHeightConstraint:NSLayoutConstraint?
     var verticalRoomViewHeightConstraint:NSLayoutConstraint?
     var rooms:[RoomMappableModel] = []
-    var currentRoomOfMember: RoomModel?{
-        get{
-            if let room = DBManager.shared.getSingletonModel(ofType: RoomModel.self){
-                return room
-            }else{
-                return nil
-            }
-        }
-    }
     var accountVCType:AccountVCType = .member
     var accountActions = [
         "TITLE_CURRENT_MEMBER_ROOM",
@@ -212,7 +203,6 @@ class AccountVC:BaseVC,VerticalCollectionViewDelegate,UITableViewDelegate,UITabl
         NotificationCenter.default.addObserver(self, selector:#selector(didReceiveAddRoomNotification(_:)), name: Constants.NOTIFICATION_CREATE_ROOM, object: nil)
         NotificationCenter.default.addObserver(self, selector:#selector(didReceiveAcceptRoomNotification(_:)), name: Constants.NOTIFICATION_ACCEPT_ROOM, object: nil)
         NotificationCenter.default.addObserver(self, selector:#selector(didReceiveDeclineRoomNotification(_:)), name: Constants.NOTIFICATION_DECLINE_ROOM, object: nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(didReceiveRemoveMemberFromRoomNotification(_:)), name: Constants.NOTIFICATION_REMOVE_MEMBER_IN_ROOM, object: nil)
     }
     //MARK: Notification
     @objc func didReceiveRemoveRoomNotification(_ notification:Notification){
@@ -261,10 +251,6 @@ class AccountVC:BaseVC,VerticalCollectionViewDelegate,UITableViewDelegate,UITabl
         }
     }
     
-    @objc func didReceiveRemoveMemberFromRoomNotification(_ notification:Notification){
-        _ = DBManager.shared.deleteAllRecords(ofType: RoomModel.self)
-        
-    }
 //    func updateUIForRoleInRoomNotification(_ notification:Notification){
 //            DispatchQueue.main.async {
 //                let hub = MBProgressHUD.showAdded(to: self.bottomContainerView, animated: true)

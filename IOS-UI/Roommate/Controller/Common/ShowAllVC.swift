@@ -166,11 +166,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
             
             //Add Constraint
             _ = orderByView.anchor(view.topAnchor, view.leftAnchor, nil, nil, UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0), CGSize(width: orderByViewWidth, height: orderByViewHeight))
-            if #available(iOS 11.0, *) {
-                print(view.safeAreaLayoutGuide.topAnchor)
-            } else {
-                // Fallback on earlier versions
-            }
             _ =  btnOrderBy.anchorTopRight(orderByView.topAnchor, orderByView.rightAnchor, 150.0, orderByViewHeight)
             _ = lblOrderBy.anchorTopRight(orderByView.topAnchor, btnOrderBy.leftAnchor, orderByViewWidth-150.0, orderByViewHeight)
             _ = imageView.anchor(btnOrderBy.topAnchor,nil,btnOrderBy.bottomAnchor,btnOrderBy.rightAnchor,UIEdgeInsets(top: 10, left: 0, bottom: -10, right: -10))
@@ -365,28 +360,20 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
     func loadRoommateData(withNewFilterArgModel:Bool){
         if !APIConnection.isConnectedInternet(){
             showErrorView(inView: self.bottomView, withTitle: "NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE".localized) {
-                //                self.checkAndLoadInitData(inView: self.bottomView) { () -> (Void) in
                 self.requestRoommatePost(apiRouter: self.apiRouter,withNewFilterArgModel: withNewFilterArgModel)
                 //                }
             }
         }else{
-            //            self.checkAndLoadInitData(inView: self.bottomView) { () -> (Void) in
             self.requestRoommatePost(apiRouter:self.apiRouter, withNewFilterArgModel: withNewFilterArgModel)
-            //            }
         }
     }
     
     func loadRoomForOwnerOrMemberData(withNewFilterArgModel:Bool){
         if !APIConnection.isConnectedInternet(){
-            showErrorView(inView: self.bottomView, withTitle: "NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE".localized) {
-                //                self.checkAndLoadInitData(inView: self.bottomView) { () -> (Void) in
-                self.requestRoom(apiRouter:self.apiRouter,withNewFilterArgModel: withNewFilterArgModel)
-                //                }
+            showErrorView(inView: self.bottomView, withTitle: "NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE".localized) { self.requestRoom(apiRouter:self.apiRouter,withNewFilterArgModel: withNewFilterArgModel)
             }
         }else{
-            //            self.checkAndLoadInitData(inView: self.bottomView) { () -> (Void) in
             self.requestRoom(apiRouter: self.apiRouter, withNewFilterArgModel: withNewFilterArgModel)
-            //            }
         }
     }
     
@@ -437,8 +424,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
                     //200
                     if statusCode == .OK{
                         guard let values = values else{
-                            //                        APIResponseAlert.defaultAPIResponseError(controller: self, error: ApiResponseErrorType.PARSE_RESPONSE_FAIL)
-                            //                        self.group.leave()
                             return
                         }
                         if newFilterArgModel {
@@ -474,8 +459,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
             hub.mode = .indeterminate
             hub.bezelView.backgroundColor = .white
             hub.contentColor = .defaultBlue
-            //            hub.label.text = "MB_LOAD_DATA_TITLE".localized
-            //            MBProgressHUD.showAdded(to: self.bottomView, animated: true)
         }
         DispatchQueue.global(qos: .background).async {
             APIConnection.requestArray(apiRouter:apiRouter, returnType: RoommatePostResponseModel.self) { (values, error, statusCode) -> (Void) in
@@ -600,8 +583,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
                     //200
                     if statusCode == .OK{
                         guard let values = values else{
-                            //                        APIResponseAlert.defaultAPIResponseError(controller: self, error: ApiResponseErrorType.PARSE_RESPONSE_FAIL)
-                            //                        self.group.leave()
                             return
                         }
                         if values.count == 0, self.page > 1{
@@ -659,8 +640,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
                     //200
                     if statusCode == .OK{
                         guard let values = values else{
-                            //                        APIResponseAlert.defaultAPIResponseError(controller: self, error: ApiResponseErrorType.PARSE_RESPONSE_FAIL)
-                            //                        self.group.leave()
                             return
                         }
                         if values.count == 0, self.page > 1{
@@ -739,9 +718,6 @@ RoomCVCellDelegate,RoommateCVCellDelegate{
             
             vc.viewType = showAllVCType == .suggestRoom ? .roomPostDetailForFinder : .roomPostDetailForCreatedUser
             vc.room = rooms[indexPath.row]
-            //            let mainVC = UIViewController()
-            //            let nv = UINavigationController(rootViewController: mainVC)
-            //            present(nv, animated: false) {nv.pushViewController(vc, animated: false)}
             presentInNewNavigationController(viewController: vc)
         case .roommatePostForCreatedUser:
             let vc = PostDetailVC()

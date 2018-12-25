@@ -132,27 +132,6 @@ class HomeVC:BaseAutoHideNavigationVC,UICollectionViewDelegate,UICollectionViewD
             self.loadRemoteData()
             self.registerNotification()
         }
-//        if !APIConnection.isConnectedInternet(){
-//            showErrorView(inView: self.contentView, withTitle: "NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE".localized) {
-//                self.checkAndLoadInitData(inView: self.view) { () -> (Void) in
-//                    DispatchQueue.main.async {
-//
-//                    }
-//                }
-//            }
-//        }else{
-//
-//            self.checkAndLoadInitData(inView: self.view) { () -> (Void) in
-//                DispatchQueue.main.async {
-//                self.setupUI()
-//                self.setupDelegateAndDataSource()
-//                self.enableLocationServices()
-//                self.loadRemoteData()
-//                self.registerNotification()
-//                }
-//            }
-//        }
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -168,21 +147,13 @@ class HomeVC:BaseAutoHideNavigationVC,UICollectionViewDelegate,UICollectionViewD
             navigationItem.hidesSearchBarWhenScrolling = true
         }
     }
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//        for view in (self.navigationController?.navigationBar.subviews)! {
-//            view.layoutMargins = UIEdgeInsets.zero
-//        }
-//    }
     //MARK: Setup UI and Delegate
     func setupUI(){
         transparentNavigationBarBottomBorder()
         //        extendedLayoutIncludesOpaqueBars = true
         let suggestRoomViewHeight:CGFloat = Constants.HEIGHT_DEFAULT_BEFORE_LOAD_DATA
         let newRoomViewHeight:CGFloat = Constants.HEIGHT_DEFAULT_BEFORE_LOAD_DATA
-        //            80 + Constants.HEIGHT_CELL_NEWROOMCV * CGFloat(Constants.MAX_ROOM_ROW) + Constants.HEIGHT_MEDIUM_SPACE
         let newRoommmateViewHeight:CGFloat = Constants.HEIGHT_DEFAULT_BEFORE_LOAD_DATA
-        //            80 + Constants.HEIGHT_CELL_NEWROOMMATECV * CGFloat(Constants.MAX_POST) + Constants.HEIGHT_MEDIUM_SPACE
         let totalContentViewHeight:CGFloat
         navigationItem.titleView = searchController.searchBar
         let leftItem = UIBarButtonItem(customView: locationSearchView)
@@ -197,10 +168,6 @@ class HomeVC:BaseAutoHideNavigationVC,UICollectionViewDelegate,UICollectionViewD
         topContainerView.addSubview(topNavigation)
         bottomContainerView.addSubview(newRoomPostView)
         bottomContainerView.addSubview(newRoommatePostView)
-        //Navigation bar subviews constraints
-        //        _ = locationSearchView.anchor(tempView.topAnchor, tempView.leftAnchor, tempView.bottomAnchor, nil,.zero,CGSize(width: 100.0, height: 0))
-        //        _ = searchController.searchBar.anchor(tempView.topAnchor, locationSearchView.rightAnchor, tempView.bottomAnchor, tempView.rightAnchor,.zero)
-        
         
         
         if user.roleId != 2{
@@ -603,14 +570,6 @@ class HomeVC:BaseAutoHideNavigationVC,UICollectionViewDelegate,UICollectionViewD
             }
         case 1:
             if  user.roleId == Constants.ROOMOWNER{
-                //                let vc = (self.tabBarController?.viewControllers![1] as! UINavigationController)
-                //                self.tabBarController?.selectedViewController = vc
-                //                let allVC = vc.viewControllers.first as! AllVC
-                //                allVC.segmentControl.selectedSegmentIndex = 1
-                //                allVC.resetFilter(filterType: .roommmate)
-                //                allVC.roommates = []
-                //                allVC.loadRoommateData(withNewFilterArgModel: true)\
-                //                tabBarController?.selectedIndex = 4
                 let vc = self.tabBarController?.viewControllers![4]
                 self.tabBarController?.selectedViewController = vc
                 
@@ -624,10 +583,6 @@ class HomeVC:BaseAutoHideNavigationVC,UICollectionViewDelegate,UICollectionViewD
                 allVC.loadRoommateData(withNewFilterArgModel: true)
             }
         case 2:
-            //            guard let currentRoom = DBManager.shared.getSingletonModel(ofType: RoomModel.self) else{
-            ////                AlertController.showAlertInfor(withTitle: "", forMessage: <#T##String?#>, inViewController: <#T##UIViewController#>)
-            //                break
-            //            }
             let vc = CERoommatePostVC()
             vc.cERoommateVCType = .create
             presentInNewNavigationController(viewController: vc)

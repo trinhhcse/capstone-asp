@@ -260,7 +260,7 @@
 "ROOM_POST_NAME"="Tên bài viết";
 "ROOM_BASE_INFORMATION"="Thông tin phòng hiện tại của bạn";
 "ROOM_BASE_INFORMATION_FOR_POST"="Thông tin phòng";
-
+"ROOM_REACH_MAX_MEMBER"="Thành viên trong phòng bạn đã đầy";
 "VIEW_DETAIL" = "Xem chi tiết";
 
 
@@ -387,7 +387,7 @@
 "RATE_ROOM"="Đánh giá phòng";
 "RATE_MEMBER"="Đánh giá thành viên";
 "RATE_ROOM_DETAIL"="Đánh giá của những người từng ở đây";
-"RATE_MEMBER_DETAIL"="Đánh giá của chủ nhà";
+"RATE_MEMBER_DETAIL"="Đánh giá của chủ nhà và thành viên";
 "RATE_AVG"="Điểm trung bình";
 "RATE_ALL"="Tất cả đánh giá";
 
