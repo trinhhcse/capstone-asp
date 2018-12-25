@@ -32,7 +32,7 @@ class RoomCVCell: UICollectionViewCell {
             lblCurrentMember.text = String(format: "CURRENT_NUMBER_OF_PERSON".localized, room.members?.count ?? 0,room.maxGuest)
             imgvStatus.image = room.statusId == Constants.AUTHORIZED ? UIImage(named: "certificated") : UIImage(named: "certificate")
             tvName.text = room.name
-            tvPrice.text = String(format: "PRICE_OF_ROOM".localized,room.price.formatString,"PERSON".localized)
+            tvPrice.text = String(format: "PRICE_OF_ROOM".localized,room.price.formatString,"MONTH".localized)
             tvAddress.text = room.address
         }
     }
