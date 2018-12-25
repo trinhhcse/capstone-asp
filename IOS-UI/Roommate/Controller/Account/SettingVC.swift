@@ -147,6 +147,7 @@ class SettingVC: BaseVC ,UITableViewDataSource,UITableViewDelegate{
                 let appdelegate = UIApplication.shared.delegate as! AppDelegate
                 appdelegate.window!.rootViewController?.dismiss(animated: true, completion: {
                     DBManager.shared.deleteAllRealmDB()
+                    BaseVC.successLoaded = false
                     let appdelegate = UIApplication.shared.delegate as! AppDelegate
                     appdelegate.window!.rootViewController = UINavigationController(rootViewController: Utilities.vcFromStoryBoard(vcName: Constants.VC_FIRST_LAUNCH, sbName: Constants.STORYBOARD_MAIN) )
                 })

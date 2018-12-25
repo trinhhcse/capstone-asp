@@ -43,7 +43,7 @@ class MembersView: UIView , UITableViewDelegate,UITableViewDataSource ,MemberTVC
     
     var viewType:ViewType?{
         didSet{
-            if viewType == .detailForOwner || viewType == .currentDetailForMember {
+            if viewType == .detailForOwner {
                 tableView.allowsMultipleSelectionDuringEditing = false
 //                tableView.allowsSelection = false
 //                tableView.isEditing = false
@@ -102,12 +102,16 @@ class MembersView: UIView , UITableViewDelegate,UITableViewDataSource ,MemberTVC
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CELL_MEMBERTV, for: indexPath) as! MemberTVCell
         cell.indexPath = indexPath
+        let member = members![indexPath.row]
         cell.delegate = self
-        if viewType == .detailForOwner{
-            cell.buttonTitle = "RATE".localized
+        if viewType == .detailForOwner || viewType == .currentDetailForMember{
+            if member.userId != (DBManager.shared.getUser()?.userId ?? 0){
+                cell.buttonTitle = "RATE".localized
+            }
+            
         }
         
-        let member = members![indexPath.row]
+        
         if member.roleId == Constants.ROOMMASTER{
             //Master
             let name = NSMutableAttributedString(string:"\(member.username!) ", attributes: [NSAttributedStringKey.foregroundColor:UIColor.red])

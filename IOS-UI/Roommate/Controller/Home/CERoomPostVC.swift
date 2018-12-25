@@ -208,7 +208,7 @@ class CERoomPostVC: BaseVC,GenderViewDelegate,InputViewDelegate,MaxMemberSelectV
         baseInformationView.btnTitle = "VIEW_DETAIL".localized
         baseInformationView.room = roomOfPost
         baseInformationView.delegate = self
-        maxMemberSelectView.maxMember = roomOfPost.maxGuest
+        maxMemberSelectView.maxMember = roomOfPost.maxGuest - (roomOfPost.members?.count ?? 0)
         priceInputView.maxPrice = Double(roomOfPost.price)
         if cERoomPostVCType == CEVCType.edit{
             nameInputView.text = roomPostRequestModel.name

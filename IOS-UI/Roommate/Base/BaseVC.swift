@@ -94,7 +94,6 @@ class BaseVC:UIViewController,UIScrollViewDelegate,UIImagePickerControllerDelega
     }
     
     func checkAndLoadInitData(view:UIView,_ completed:@escaping ()->Void){
-        
         if !APIConnection.isConnectedInternet(){
             showErrorView(inView: view, withTitle: "NETWORK_STATUS_CONNECTED_REQUEST_ERROR_MESSAGE".localized) {
                 self.checkAndLoadInitData(view: view){
